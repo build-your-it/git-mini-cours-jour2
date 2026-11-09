@@ -2,7 +2,7 @@
 # Mini-cours Git - jour2 : vérifie l'exercice
 # Les vérifications portent sur la structure et les titres des commits,
 # jamais sur leurs identifiants : elles marchent quelle que soit la configuration de Git.
-cd "$HOME/mini-cours-git-exos/jour2/projet" 2>/dev/null || { echo "Dépôt introuvable : lance d'abord  bash jour2/setup.sh"; exit 1; }
+cd "$HOME/mini-cours-git-exos/jour2/projet" 2>/dev/null || { echo "Dépôt introuvable : lance d'abord  bash setup.sh"; exit 1; }
 ok=0; total=0
 check() { total=$((total+1)); if eval "$2" >/dev/null 2>&1; then echo "  OK          $1"; ok=$((ok+1)); else echo "  PAS ENCORE  $1"; fi; }
 titre() { git log -1 --format=%s "$1" 2>/dev/null; }       # titre du commit pointé par une référence
